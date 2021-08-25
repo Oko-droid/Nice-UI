@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spinning</title>
+    <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            .container{
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                padding: 20px;
+            }
+            .spin::before{
+                content: "";
+                position: absolute;
+                height: 300px;
+                width: 50%;
+                background-color: aqua;
+                top: 0;
+                left: 0;
+
+            }
+            .spin{
+                /* position: absolute; */
+                height: 300px;
+                width: 300px;
+                background-color: yellow;
+                /* transform-style: preserve-3d; */
+                border: 2px solid greenyellow;
+                animation: spin 12s infinite;
+            }
+            /* .spin1{
+                position: absolute;
+                height: 300px;
+                width: 300px;
+                background-color: aqua;
+                animation: spin 12s infinite;
+            } */
+            @keyframes spin {
+                100%{
+                    transform: rotateY(360deg);
+                }
+               
+            }
+            .ball{
+                height: 100px;
+                width: 100px;
+                background-color: blue;
+                animation: bounce 12s infinite;
+            }
+            @keyframes bounce {
+                100%{
+                    transform: X(100deg);
+                }
+            }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <div class="spin"></div>
+            <div class="spin1"></div>
+        </div>
+
+        <div class="ball"></div>
+</body>
+</html>

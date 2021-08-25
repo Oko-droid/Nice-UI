@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+   
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    position: relative;
+    animation: colorChange 100s infinite;
+}
+@keyframes colorChange{
+    0%{
+        background-color: rgb(255, 255, 255);
+        animation-delay: 60s;
+    }
+    /* 60%{
+        background-color: black;
+        /* animation-delay: 80s; 
+    } 
+    */
+    60%{
+        background-color: rgb(0, 0, 0);
+    }
+    65%{
+        background-color: rgb(255, 255, 255);
+    }
+    
+}
+#game{
+    position: absolute;
+    /* top: 50%;
+    left: 25%; */
+    margin-top: 31.5vh;
+    width: 500px;
+    height: 200px;
+    border: 5px solid black;
+    z-index: 9999;
+    animation: colorBorder 190s infinite;
+}
+@keyframes colorBorder{
+    0%{
+        border: 1px solid rgb(0, 0, 0);
+        animation-delay: 150s;
+    }
+    30%{
+        border: 1px solid rgb(255, 255, 255);
+        /* animation-delay: 160s; */
+    }
+    
+  
+    
+}
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: rgb(13, 104, 13);
+    position: relative;
+    top: 150px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 90px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+.animate{
+    animation: jump 500ms infinite;
+}
+#block{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(128, 0, 28);
+    top: 130px;
+    left: 480px;
+    animation: block 1.2s infinite linear;
+    z-index: -2;
+}
+@keyframes block{
+    0%{left: 470px;}
+    100%{left:-38px;}
+}
+#Block{
+    position: relative;
+    width: 20px;
+    height: 29px;
+    background-color: rgb(161, 41, 135);
+    top: 100px;
+    left: 480px;
+    margin-left: 8vw;
+    animation: block 1.2s infinite linear;
+    z-index: -2;
+}
+@keyframes Block{
+    0%{left: 470px;}
+    100%{left:-8px;}
+}

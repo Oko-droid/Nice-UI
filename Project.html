@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./project.css">
+    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
+    <title>Final Project</title>
+
+    <style>
+        .container_main{
+            height: 80vh;
+            width: 100%;
+        }
+            .container_main:hover .container{
+                clip-path: circle(100%)
+            }
+            .container{
+                margin: 0;
+                padding: 0;
+                /* background-color: rgb(60, 152, 189); */
+                /* padding: 4.6em; */
+                height: 90vh;
+                width: 100%;
+                /* border-radius: 10px; */
+                clip-path: circle(13% at 10% 6%);
+                transition: all .9s ease-in-out;
+                cursor: pointer;
+                /* z-index: 2; */
+            }
+    </style>
+</head>
+<body>
+    <main class="container_main">
+
+
+    
+        <header id="main_head" class="container">
+                <!-- Navigation Code-->
+                
+                <nav>
+                        <div class="empty"></div>
+                    <!-- logo -->
+                    <div class="logo">
+                       <h1>OP</h1>
+                    </div> 
+                    <!-- navigation link -->
+                    <ul class="nav-links">
+                        <li><a href="#" id="click-home">Home</a></li>
+                        <li><a href="#" id="click-service">Service</a></li>
+                        <li><a href="#" id="click-contact">Contact us</a></li>
+                        <li><a href="#" id="click-about">About Us</a></li>
+                        <li><a href="#" id="click-ask">Ask Us</a></li>
+                        <div class="close">&times;</div>                
+                   </ul> 
+                </nav>
+                <section class="cto">
+                        <section class="home" id="home">
+                                <!-- <div class="cto_text">
+                                    <h1 class="colour_white"> We are a Smart Creative Team</h1>
+                                    <p>We are here to help you create and prmote your digital market on the web</p>
+                                </div> -->
+                                <div class="home-content">
+                                    <video autoplay controls>
+                                        <source src="./My video ad.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                        </section> 
+
+                    <div class="cto_text" style="font-size: 1.28rem;">
+                        <h1 class="colour_white"> Get Better Online Team</h1>
+                        <p >We help you create and prmote your online market on the web</p>
+                    </div>
+                    <div class="cto_form" style="display: none;">
+                        <div class="reg_form">
+                            <h3>Connect with Us</h3>
+                            <p>Tell us what you need and we would make it come to live</p>
+                            <div class="form_control">
+                                <input type="text" placeholder="full Name">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="form_control">
+                                <input type="text" placeholder="Email">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="form_control">
+                                <input type="text" placeholder="Phone Number">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="form_control">
+                                <input type="submit" value="send" class="primary_btn">
+                            </div>
+                    </div>
+
+                   
+                </section>
+                
+                <section class="services" id="services">
+                    <div class="services-content">
+                        <h2>We provide online services:</h2>
+                        <p>Product Review</p>
+                        <p>Product Branding</p>
+                        <p>Product Selling</p>
+                    </div>
+                </section>
+                <section class="about" id="about">
+                    <div class="about-content">
+                        <h3>We are a new company in town, and we are all about our customers satisfaction</h3>
+                        
+                        <h1>OP</h1>
+                    </div>
+                </section>
+                <section class="ask" id="ask">
+                    <div class="ask-content">
+                        <h3>Do you want to place a call?</h3>
+                        <a href="tel://+234-008773-333">
+                            <img src="./imgs/mobile.png" alt="mobile">
+                        </a>
+                    </div>
+                </section>
+
+                <div class="footer" id="foot">
+                    <div>
+                        <div class="social-links">
+                            <a href="" class="twitter" target="\blank"><i class="bi bi-twitter">Twitter</i></a>
+                            <a href="#" class="facebook" target="\blank"><i class="bi bi-facebook">Facebook</i></a>
+                            <a href="" class="google-plus"><i class="bi bi-whatsapp" target="\blank">Whatsapp</i></a>
+                            <a href="" class="instagram" target="\blank"><i class="bi bi-git-hub">Github</i></a>
+                          </div>
+                    </div>
+                </div>
+            </header>
+        </main>
+
+        <script>
+            document.getElementById('click-home').addEventListener('click', function(){
+                document.querySelector('.home').style.display = 'flex';
+                document.querySelector('.services').style.display = 'none';
+                document.querySelector('.cto_form').style.display = 'none';
+                document.querySelector('.about').style.display = 'none';
+                document.querySelector('.ask').style.display = 'none';
+            })
+        
+            document.getElementById('click-service').addEventListener('click', function(){
+                document.querySelector('.services').style.display = 'flex';
+                document.querySelector('.home').style.display = 'none';
+                document.querySelector('.cto_form').style.display = 'none';
+                document.querySelector('.about').style.display = 'none';
+                document.querySelector('.ask').style.display = 'none';
+            })
+            document.getElementById('click-contact').addEventListener('click', function(){
+                document.querySelector('.cto_form').style.display = 'flex';
+                document.querySelector('.home').style.display = 'none';
+                document.querySelector('.about').style.display = 'none';
+                document.querySelector('.services').style.display = 'none';
+                document.querySelector('.ask').style.display = 'none';
+            })
+            document.getElementById('click-about').addEventListener('click', function(){
+                document.querySelector('.about').style.display = 'flex';
+                document.querySelector('.cto_form').style.display = 'none';
+                document.querySelector('.home').style.display = 'none';
+                document.querySelector('.services').style.display = 'none';
+                document.querySelector('.ask').style.display = 'none';
+            })
+            document.getElementById('click-ask').addEventListener('click', function(){
+                document.querySelector('.ask').style.display = 'flex';
+                document.querySelector('.about').style.display = 'none';
+                document.querySelector('.cto_form').style.display = 'none';
+                document.querySelector('.home').style.display = 'none';
+                document.querySelector('.services').style.display = 'none';
+            })
+        
+            /*===== trying mobile nav ====*/
+            document.querySelector('.logo').addEventListener('click', () =>{
+                document.querySelector('.nav-links').style.display = 'flex';
+            document.querySelector('.empty').style.display = 'flex';
+            document.querySelector('#foot').style.display = 'flex';
+            })
+            document.querySelector('.close').addEventListener('click', () =>{
+                document.querySelector('.nav-links').style.display = 'none'; 
+            document.querySelector('.empty').style.display = 'none';
+            document.querySelector('#foot').style.display = 'none';
+            })
+
+            
+
+            // ====click the links and collaps the nav === //
+            document.querySelector('.empty').addEventListener('click', () =>{
+                document.querySelector('.nav-links').style.display = 'none'; 
+                document.querySelector('.empty').style.display = 'none';
+                document.querySelector('#foot').style.display = 'none';
+            })
+        </script>
+</body>
+</html>
